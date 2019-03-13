@@ -101,7 +101,6 @@ There are still many other areas of possible improvement but it's a start.
 
 - There are plenty blogs and weekly email blasts which are great sources for information on the sector, such as – some examples.
 - Participate in guilds – Security architecture guild. Setting up/ have set up security champion guild.
-- Regular catch ups with security in order to continue fostering the relationship you have created.
 - OWASP is a non profit organisation which is great source on application security threats and a great place to start if you want to get informed.
 
 ## How to empower members of your team to become security champions
