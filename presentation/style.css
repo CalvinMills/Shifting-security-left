@@ -1,0 +1,25 @@
+div.spectacle-content {
+  max-width: 90%;
+  max-height: none;
+}
+
+li {
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+}
+
+ul {
+  margin-right: 15%;
+  margin-left: 15%;
+  padding-top: 4em !important;
+}
+
+img.rounded {
+  border-radius: 0.5em;
+}
+
+.flex-row {
+  display: flex;
+  align-content: center;
+}

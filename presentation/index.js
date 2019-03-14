@@ -1,17 +1,17 @@
 // Import React
 import React from "react";
 
+import "./style.css";
+
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
+  Appear,
   Deck,
   Heading,
   Image,
   List,
   ListItem,
   Notes,
-  Quote,
   Slide,
   Text
 } from "spectacle";
@@ -20,7 +20,17 @@ import {
 import createTheme from "spectacle/lib/themes/default";
 
 const images = {
-  simon: require("../assets/simon_sinek.jpg")
+  simon: require("../assets/simon_sinek.jpg"),
+  bsimm: require("../assets/BSIMM.png"),
+  cimaBsimm: require("../assets/CIMA_BSIMM.png"),
+  qrCode: require("../assets/QRCode.png"),
+  soundsHard: require("../assets/SoundsHard.gif"),
+  work: require("../assets/work.gif"),
+  questions: require("../assets/questions.gif"),
+  me: require("../assets/Me.jpg"),
+  github: require("../assets/githuub.png"),
+  securityChampion: require("../assets/SecurityChampion.png"),
+  hero: require("../assets/hero.png")
 };
 
 // Require CSS
@@ -62,11 +72,41 @@ export default class Presentation extends React.Component {
             champion aims to provide value to the devops process.
           </Notes>
         </Slide>
-        <Slide bgColor="secondary" transition={["zoom"]}>
-          <Image src={images.simon} />
-          <Heading size={5} textColor="primary">
-            Simon Sinek
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Who are you?
           </Heading>
+          <br />
+          <Appear>
+            <div>
+              <Heading size={4} caps lineHeight={1} textColor="secondary">
+                Calvin Mills
+              </Heading>
+              <br />
+              <Image
+                className="rounded"
+                width="400"
+                height="300"
+                src={images.me}
+              />
+              <br />
+              <div>
+                <Image width="100" height="100" src={images.github} />
+                <Heading size={4} caps lineHeight={1} textColor="secondary">
+                  @Calvin_Mills
+                </Heading>
+              </div>
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="secondary" transition={["zoom"]}>
+          <Image src={images.simon} className="rounded" />
+          <br />
+          <Appear>
+            <Heading size={4} textColor="primary">
+              Simon Sinek
+            </Heading>
+          </Appear>
           <Notes>
             Simon is an author and leadership speaker who pioneered the "Start
             with why" movement. The idea is to always consider why you do
@@ -76,50 +116,44 @@ export default class Presentation extends React.Component {
             scenario before I dive in.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="tertiary">
+        <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} textColor="secondary">
             Why am I here?
           </Heading>
-          <Notes>
-            Which leads me to the question, Why do you need a security champion,
-            what problems does the initiative aim to solve?
-          </Notes>
-        </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
           <List>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
-                The Devops conundrum
-              </Heading>
-            </ListItem>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
+            <Appear>
+              <ListItem>The Devops conundrum</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
                 Breakdown in communication between security and development
-              </Heading>
-            </ListItem>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
-                Ever changing cyber security climate
-              </Heading>
-            </ListItem>
-            <ListItem>And the list goes on</ListItem>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Ever changing cyber security climate</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>And the list goes on</ListItem>
+            </Appear>
           </List>
           <Notes>
-            The Devops conundrum - As I noted before, most engineers understand
-            the advantages of deploying software faster than ever. It is
-            important to note that when we do, what are the repercussions in
-            terms of security, how can we ensure that the products we deliver
-            meet ever increasing security requirements whilst keeping up the
-            aspirational agility of a devops system. Security teams and
-            development teams can sometimes be seen as serving their own
-            purposes instead of working together towards the common goal which
-            is deploying quality software to our clients as fast as possible.
-            This doesn't happen in most environments. Every day there are new
-            threats being uncovered, new threat vectors surfacing that it can be
-            difficult to keep up with the cyber security world. These are just
-            some of the challenges we face in terms of the relationship between
-            development and security when developing software in the modern
-            landscape. But you get the picture, it's hard.
+            Which leads me to the question, Why do you need a security champion,
+            what problems does the initiative aim to solve? The Devops conundrum
+            - As I noted before, most engineers understand the advantages of
+            deploying software faster than ever. It is important to note that
+            when we do, what are the repercussions in terms of security, how can
+            we ensure that the products we deliver meet ever increasing security
+            requirements whilst keeping up the aspirational agility of a devops
+            system. Security teams and development teams can sometimes be seen
+            as serving their own purposes instead of working together towards
+            the common goal which is deploying quality software to our clients
+            as fast as possible. This doesn't happen in most environments. Every
+            day there are new threats being uncovered, new threat vectors
+            surfacing that it can be difficult to keep up with the cyber
+            security world. These are just some of the challenges we face in
+            terms of the relationship between development and security when
+            developing software in the modern landscape. But you get the
+            picture, it's hard.
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
@@ -137,6 +171,8 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary" caps>
             What exactly is a security champion?
           </Heading>
+          <br />
+          <Image src={images.securityChampion} className="rounded" />
           <Notes>
             There is no one specific definition, as the role has evolved over
             time. Security champions are part of an app sec or development team,
@@ -145,32 +181,31 @@ export default class Presentation extends React.Component {
             development and security. This definition is evolving over time and
             encompasses more than just understanding security issues and also
             relates to simple evangelism around the application security space.
-            Sort of like a security cheerleader of sorts.
+            Sort of like a security cheerleader in some ways.
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} textColor="secondary" caps>
             So do I need super powers or something?
           </Heading>
+          <br />
+          <Image src={images.hero} className="rounded" />
           <Notes>
             So you may be wondering, who can possibly accept all this
             responsibilty.
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <List>
-            <ListItem>
-              <Heading size={3} textColor="secondary">
-                Anyone.
-              </Heading>
-            </ListItem>
-          </List>
+          <Heading size={1} textColor="secondary" caps>
+            Anyone.
+          </Heading>
           <Notes>
-            Anyone in the development team can act as a security champion, the
-            main pre-requesite for being a security champion is passion. About
-            security, about making a difference to the development team, no
-            matter what experience you have in the industry anyone can act as a
-            security champion.
+            The answer is. Anyone. Anyone in the development team can act as a
+            security champion, to be honest, anyone in the organisation can act
+            as a security champion the main pre-requesite for being a security
+            champion is passion. About security, about making a difference to
+            the development team, no matter what experience you have in the
+            security space anyone can act as a security champion.
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
@@ -178,22 +213,18 @@ export default class Presentation extends React.Component {
             I’m a security champion now, great! Okay what do I do?
           </Heading>
           <List>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
-                Hydrate security information
-              </Heading>
-            </ListItem>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
-                Training/Education
-              </Heading>
-            </ListItem>
-            <ListItem>
-              <Heading size={5} textColor="secondary">
-                Making security related decisions
-              </Heading>
-            </ListItem>
-            <ListItem>Advocating best practice</ListItem>
+            <Appear>
+              <ListItem>Hydrate security information</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Training/Education</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Making security related decisions</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Advocating best practice</ListItem>
+            </Appear>
           </List>
           <Notes>
             These are just some examples of roles a security champion can fill
@@ -207,6 +238,8 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary" caps>
             But Calvin, why would I want to do extra work?
           </Heading>
+          <br />
+          <Image src={images.work} height="450px" />
           <Notes>
             Okay fine, we software engineers are lazy by definition, I get it.
             So why did I get into it. My previous engineering manager introduced
@@ -224,13 +257,9 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary" caps>
             Okay, but I'm extra lazy, are there any cheatcodes?
           </Heading>
-          <List>
-            <ListItem>
-              <Heading size={3} textColor="secondary">
-                BSIMM.
-              </Heading>
-            </ListItem>
-          </List>
+          <Appear>
+            <Image src={images.bsimm} />
+          </Appear>
           <Notes>
             So this is me. When we first started this journey I had no idea
             where to start. This is when, with the help of some colleagues in
@@ -245,7 +274,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Text>Show CIMA BSIMM</Text>
+          <Image src={images.cimaBsimm} />
           <Notes>
             So I started by making this maturity model. Using this has allowed
             us to not only determine what to focus on next in order to make our
@@ -257,6 +286,8 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary">
             That looks like more work
           </Heading>
+          <br />
+          <Image src={images.soundsHard} />
           <Notes>
             You might be thinking "okay that's great once its done, but it looks
             like it takes alot of effort to set up". So that it is true to some
@@ -269,26 +300,24 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} textColor="secondary">
-            Impressive, but have you actually done anything other than talk
+            Impressive, but have you actually done anything other than talk?
           </Heading>
           <List>
-            <ListItem>
-              <Heading size={3} textColor="secondary">
-                Fostering constructive relationships.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                S-SDLC.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                Coding standards.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                Working on vendor SLA's.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                IAST.
-              </Heading>
-            </ListItem>
+            <Appear>
+              <ListItem>Fostering constructive relationships.</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>S-SDLC.</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Coding standards.</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Working on vendor SLA's.</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>SAST and IAST.</ListItem>
+            </Appear>
           </List>
           <Notes>
             So what have we actually managed to improve on since starting this
@@ -317,17 +346,9 @@ export default class Presentation extends React.Component {
             How do we stay informed?
           </Heading>
           <List>
-            <ListItem>
-              <Heading size={3} textColor="secondary">
-                Blogs.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                Guilds.
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                OWASP.
-              </Heading>
-            </ListItem>
+            <ListItem>Blogs.</ListItem>
+            <ListItem>Guilds.</ListItem>
+            <ListItem>OWASP.</ListItem>
           </List>
           <Notes>
             There are plenty blogs and weekly email blasts which are great
@@ -340,7 +361,8 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} textColor="secondary">
-            How to empower members of your team to become security champions
+            How can you empower members of your team to become security
+            champions?
           </Heading>
           <Notes>
             Reinforce idea that it isn’t an official position – key to remain a
@@ -353,11 +375,17 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary">
             Questions
           </Heading>
+          <br />
+          <Image src={images.questions} />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} textColor="secondary">
             Thank you!
           </Heading>
+          <Image src={images.qrCode} />
+          <Text src="https://github.com/CalvinMills/Shifting-security-left">
+            https://github.com/CalvinMills/Shifting-security-left
+          </Text>
         </Slide>
       </Deck>
     );
