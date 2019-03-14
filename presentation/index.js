@@ -57,8 +57,8 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Shifting security left
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" fit bold>
@@ -156,8 +156,8 @@ export default class Presentation extends React.Component {
             picture, it's hard.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
-          <Heading size={1} textColor="secondary" caps>
+        <Slide transition={["zoom"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1} textColor="primary" caps>
             Fine we get it, security is hard, whats the solution?
           </Heading>
           <Notes>
@@ -184,8 +184,8 @@ export default class Presentation extends React.Component {
             Sort of like a security cheerleader in some ways.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary" caps>
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
             So do I need super powers or something?
           </Heading>
           <br />
@@ -208,22 +208,26 @@ export default class Presentation extends React.Component {
             security space anyone can act as a security champion.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary">
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} textColor="primary">
             I’m a security champion now, great! Okay what do I do?
           </Heading>
           <List>
             <Appear>
-              <ListItem>Hydrate security information</ListItem>
+              <ListItem textColor="primary">
+                Hydrate security information
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>Training/Education</ListItem>
+              <ListItem textColor="primary">Training/Education</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Making security related decisions</ListItem>
+              <ListItem textColor="primary">
+                Making security related decisions
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>Advocating best practice</ListItem>
+              <ListItem textColor="primary">Advocating best practice</ListItem>
             </Appear>
           </List>
           <Notes>
@@ -254,7 +258,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary" caps>
+          <Heading size={1} textColor="secondary">
             Okay, but I'm extra lazy, are there any cheatcodes?
           </Heading>
           <Appear>
@@ -282,8 +286,8 @@ export default class Presentation extends React.Component {
             have made since starting the initiative.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary">
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} textColor="primary">
             That looks like more work
           </Heading>
           <br />
@@ -341,14 +345,14 @@ export default class Presentation extends React.Component {
             areas of possible improvement but it's a start.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary">
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} textColor="primary">
             How do we stay informed?
           </Heading>
           <List>
-            <ListItem>Blogs.</ListItem>
-            <ListItem>Guilds.</ListItem>
-            <ListItem>OWASP.</ListItem>
+            <ListItem textColor="primary">Blogs.</ListItem>
+            <ListItem textColor="primary">Guilds.</ListItem>
+            <ListItem textColor="primary">OWASP.</ListItem>
           </List>
           <Notes>
             There are plenty blogs and weekly email blasts which are great
@@ -371,8 +375,8 @@ export default class Presentation extends React.Component {
             that are enthusiastic/passionate.
           </Notes>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} textColor="secondary">
+        <Slide transition={["zoom"]} bgColor="secondary">
+          <Heading size={1} textColor="primary">
             Questions
           </Heading>
           <br />
