@@ -350,7 +350,17 @@ export default class Presentation extends React.Component {
             How do we stay informed?
           </Heading>
           <List>
-            <ListItem textColor="primary">Blogs.</ListItem>
+            <ListItem textColor="primary">
+              Blogs.
+              <List className="sub-list">
+                <ListItem>Troy Hunt</ListItem>
+                <ListItem>
+                  Security through education - social-engineer.org
+                </ListItem>
+                <ListItem>Jeff Soh</ListItem>
+                <ListItem>Tons more...</ListItem>
+              </List>
+            </ListItem>
             <ListItem textColor="primary">Guilds.</ListItem>
             <ListItem textColor="primary">OWASP.</ListItem>
           </List>
